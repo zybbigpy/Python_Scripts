@@ -47,7 +47,7 @@ def downPdf(root_url, list_a):
             print("root url is: %s" % root_url)
             print(root_url + pdf_name)
             response = requests.get(root_url + pdf_name, stream="TRUE")
-            with open(str(number) + ".pdf", 'b') as file:
+            with open(str(number) + ".pdf", 'wb') as file:
                 for data in response.iter_content():
                     file.write(data)
 
