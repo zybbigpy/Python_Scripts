@@ -28,7 +28,8 @@ def getTagA(root_url):
 
 ##从所有a标签中找到含有pdf的，然后下载
 def downPdf(root_url, list_a):
-    number = 0
+    ##选择1000以便排序
+    number = 1000
     ##如果网站url是以类似xx/index.php格式结尾，那么只取最后一个/之前的部分
     if not root_url.endswith("/"):
         index = root_url.rfind("/")
